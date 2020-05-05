@@ -1,0 +1,16 @@
+{
+  "name": "mdn-api",
+  "version": "1.0.0",
+  "description": "A api around the mdn docs",
+  "main": "src/index.js",
+  "repository": "https://github.com/Anish-Shobith/mdn-docs.git",
+  "author": "Anish-Shobith <anish.shobith19@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "html-escaper": "^3.0.0",
+    "node-fetch": "^2.6.0",
+    "turndown": "^6.0.0"
+  }
+}
