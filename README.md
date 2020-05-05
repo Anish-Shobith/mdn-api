@@ -50,12 +50,6 @@
   },
   source: {
     site: 'MDN Web Docs',
-      '\n' +
-      '\n' +
-      '```'
-  },
-  source: {
-    site: 'MDN Web Docs',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for'
   }
 }
