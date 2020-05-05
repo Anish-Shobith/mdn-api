@@ -1,8 +1,7 @@
-<dir align = "center">
+# MDN-API
 
-	MDN-API
+An Api to search mdn docs.
 
-</dir>
 
 ## Response
 

@@ -7,12 +7,10 @@ const parse = new Turndown();
 module.exports = class Source {
 
 	constructor() {
-
-		this.baseURL = `https://api.duckduckgo.com/?q=mdn`;
+		this.baseURL = 'https://api.duckduckgo.com/?q=mdn';
 	}
 
 	async search(query) {
-
 		const res = await fetch(`${this.baseURL}+${query}&format=json`);
 
 		const result = await res.json();
@@ -35,8 +33,8 @@ module.exports = class Source {
 			source: {
 				site: result.AbstractSource,
 				url: result.AbstractURL
-			},
-		}
-
+			}
+		};
 	}
-}
+
+};
