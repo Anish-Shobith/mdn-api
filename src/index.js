@@ -8,15 +8,22 @@ app.use(bodyParser.json());
 const source = new (require("./source.js"));
 app.get("/search", async (req, res) => {
 
-  if(!req.query.q) {
-	return res.send({ error: "Select a query" });
-  }
-  
-  const data = await source.search(req.query.q);
-  if(data) { 
-    res.send(data);
-  } else {
-    res.send({ error: "query not found" });
+  try {
+    if(!req.query.q && !req.query.query) {
+      return res.send({ error: "Select a query" });
+    }
+
+    const query = (req.query.q || req.query.query);
+	console.debug(query);
+    const data = await source.search(query).catch(err => res.send({ error: err.message, success: false }));
+    if(data) {
+      data.success = true;
+	  res.send(data);
+    } else {
+      res.send({ error: "query not found", success: false });
+	}
+  } catch (err) {
+    res.send(err.success = false);
   }
 
 });
