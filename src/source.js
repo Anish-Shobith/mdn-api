@@ -17,10 +17,6 @@ module.exports = class Source {
 
 		const text = result.AbstractText.slice(33, -10);
 		
-		if (!text.match(/<p>(.+)<\/p>/g)) {
-			return null;
-		}
-		
 		const description = /<p>(.+)<\/p>/g.exec(text)[0].replace(/<\/?p>/g, '');
 		const raw = unescape(text.replace(/<\/?p>/g, '').slice(description.length).replace(/<\/?(pre|code)>/g, '')).match(/(.*)/gm);
 
