@@ -14,7 +14,6 @@ app.get("/search", async (req, res) => {
     }
 
     const query = (req.query.q || req.query.query);
-	console.debug(query);
     const data = await source.search(query).catch(err => res.send({ error: err.message, success: false }));
     if(data) {
       data.success = true;
