@@ -14,6 +14,7 @@ app.get("/search", async (req, res) => {
     }
 
     const query = (req.query.q || req.query.query);
+
     const data = await source.search(query).catch(err => res.send({ error: err.message, success: false }));
     if(data) {
       data.success = true;
@@ -31,4 +32,4 @@ app.use((req, res) => {
   res.status(404).send({url: req.originalUrl + ' not found'})
 });
 
-app.listen(3000, console.log('Teamtrees API is listining on port: ' + 3000));
+app.listen(3000, console.log('API is listining on port: ' + 3000));
