@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "html-escaper": "^3.0.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "turndown": "^6.0.0"
   },
   "devDependencies": {
