@@ -1,6 +1,38 @@
-# MDN-API
+<div align = center>
+    <h1> MDN-API </h1>
+  <i> An Api to search mdn docs. </i>
+  <hr>
+</div>
+<br>
 
-An Api to search mdn docs.
+## Installing and Building
+
+1. Clone the project
+```sh
+git clone https://github.com/Anish-Shobith/mdn-api
+```
+
+2. Change directory
+```sh
+cd mdn-api
+```
+
+3. Install packages
+```sh
+yarn
+```
+
+4. Build the project
+```sh
+yarn build
+```
+
+5. Start the project
+```sh
+yarn start
+```
+
+Your api will be hosted on `localhost` and port `3000`.
 
 ## Endpoints : 
 
